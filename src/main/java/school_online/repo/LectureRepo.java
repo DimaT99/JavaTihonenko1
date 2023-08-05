@@ -1,8 +1,9 @@
-package com.school_online.repo;
+package school_online.repo;
 
-import com.school_online.entity.Lecture;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Component;
-@Component
+import org.springframework.stereotype.Repository;
+import school_online.entity.Lecture;
+
+@Repository
 public interface LectureRepo extends JpaRepository<Lecture, Integer> {
 }

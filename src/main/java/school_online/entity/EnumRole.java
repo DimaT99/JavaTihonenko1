@@ -1,4 +1,4 @@
-package com.school_online.entity;
+package school_online.entity;
 
 public enum EnumRole {
     STUDENT,

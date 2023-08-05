@@ -1,9 +1,9 @@
-package com.school_online.entity;
+package school_online.entity;
 
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.ToString;
 
-import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
@@ -17,10 +17,10 @@ public class Homework implements Serializable {
     private String task;
     private static int count;
     private String deadline;
-    @ManyToOne(fetch = FetchType.LAZY)
+    /*@ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "lecture_id", referencedColumnName = "id")
     @ToString.Exclude
-    private Lecture lecture;
+    private Lecture lecture;*/
 
     public String getDeadline() {
         return deadline;
