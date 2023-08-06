@@ -1,6 +1,7 @@
 package school_online.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.PastOrPresent;
 import lombok.Data;
 import lombok.ToString;
 import org.hibernate.annotations.BatchSize;
@@ -25,6 +26,7 @@ public class Lecture implements Serializable {
     @BatchSize(size = 3)
     @ToString.Exclude
     private List<Homework> homeworkList;*/
+    @PastOrPresent
     private String creationDate;
     private String lectureDate;
     @Transient

@@ -30,19 +30,11 @@ public class StudentController {
         model.addAttribute("message", "Hello, Spring boot!");
         return "hello";
     }
-
-    @GetMapping()
-    public String getHome(Model model) {
+    @GetMapping("/students")
+    public String getAllStudents(Model model) {
         final List<Student> students = studentService.getStudents();
         model.addAttribute("students", students);
-        return "index";
-    }
-
-    @GetMapping("/students")
-    public String getStudent(Model model) {
-        final List<Student> students = studentService.getStudents();
-        model.addAttribute("student", students);
-        return "student";
+        return "all-students";
     }
 
     @GetMapping("/students/{id}")
@@ -59,14 +51,11 @@ public class StudentController {
     }
     @PostMapping("/add")
     public String addStudent(@RequestParam String name,
-                             @RequestParam String email,
-                             @RequestParam String type) {
+                             @RequestParam int courseId) {
         Student student = new Student();
-        Person person = new Person();
         student.setName(name);
-        person.setEmail(email);
-        person.setEnumRole(EnumRole.STUDENT);
+        student.setCourseId(courseId);
         studentService.save(student);
-        return "redirect:/all-students";
+        return "redirect:/students";
     }
 }
