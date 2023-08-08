@@ -1,10 +1,10 @@
-package com.school_online.service;
+package school_online.service;
 
-import com.school_online.entity.EnumRole;
-import com.school_online.entity.Person;
-import com.school_online.repo.PersonRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import school_online.entity.EnumRole;
+import school_online.entity.Person;
+import school_online.repo.PersonRepo;
 
 import java.util.List;
 import java.util.Optional;
@@ -12,32 +12,32 @@ import java.util.Random;
 
 @Service
 public class PersonService {
-    private final PersonRepo personRepo61;
+    private PersonRepo personRepo;
 
     @Autowired
-    public PersonService(final PersonRepo personRepo61) {
-        this.personRepo61 = personRepo61;
+    public PersonService(PersonRepo personRepo) {
+        this.personRepo = personRepo;
     }
 
     public void savePerson(final Person person) {
-        personRepo61.save(person);
+        personRepo.save(person);
     }
 
     public List<Person> findAll() {
-        return personRepo61.findAll();
+        return personRepo.findAll();
     }
 
     public Optional<Person> getPerson(final Integer id) {
-        return personRepo61.findById(id);
+        return personRepo.findById(id);
     }
 
     public List<Person> getPersonList() {
-        return personRepo61.findAllByCourseId(1);
+        return personRepo.findAllByCourseId(1);
     }
 
-    public void updatePerson(final PersonRepo person) {
-        personRepo61.updatePerson(person);
-    }
+    /*public void updatePerson(final PersonRepo person) {
+        personRepo.updatePerson(person);
+    }*/
     public void createPersonsBeforeStart() {
         final Random random = new Random();
         final int count = random.nextInt(10, 20);
@@ -53,7 +53,7 @@ public class PersonService {
             } else {
                 person.setEnumRole(EnumRole.STUDENT);
             }
-            personRepo61.save(person);
+            personRepo.save(person);
         }
     }
 }

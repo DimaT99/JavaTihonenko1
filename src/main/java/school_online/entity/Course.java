@@ -1,8 +1,8 @@
-package com.school_online.entity;
+package school_online.entity;
 
+import jakarta.persistence.*;
 import lombok.Data;
 
-import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;

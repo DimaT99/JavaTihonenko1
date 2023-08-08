@@ -1,10 +1,10 @@
-package com.school_online.entity;
+package school_online.entity;
 
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.ToString;
 import org.hibernate.annotations.BatchSize;
 
-import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.List;
@@ -19,24 +19,24 @@ public class Lecture implements Serializable {
     private String name;
     private String description;
     private int personId;
-    @OneToMany(mappedBy = "lecture",
+   /* @OneToMany(mappedBy = "lecture",
             cascade = CascadeType.ALL,
             orphanRemoval = true)
     @BatchSize(size = 3)
     @ToString.Exclude
-    private List<Homework> homeworkList;
+    private List<Homework> homeworkList;*/
     private String creationDate;
     private String lectureDate;
     @Transient
     LocalDate date;
 
-    public List<Homework> getHomeworkList() {
+    /*public List<Homework> getHomeworkList() {
         return homeworkList;
     }
 
     public void setHomeworkList(List<Homework> homeworkList) {
         this.homeworkList = homeworkList;
-    }
+    }*/
 
     public static int getCount() {
         return count;
