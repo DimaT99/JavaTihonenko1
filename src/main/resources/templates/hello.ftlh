@@ -4,13 +4,13 @@
     <title>Hello Spring Boot</title>
 </head>
 <body>
-<h1>${message}</h1>
+<h1>${"Is under development"}</h1>
 
-<ul>
+<#--<ul>
     <#list menu as menu>
         <li><a href="${course.link}">${course.label}</a></li>
     </#list>
-</ul>
+</ul>-->
 
 </body>
 </html>

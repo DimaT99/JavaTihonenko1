@@ -30,6 +30,9 @@ public class PersonService {
     public Optional<Person> getPerson(final Integer id) {
         return personRepo.findById(id);
     }
+    public Optional<Person> getPersonRole(final EnumRole enumRole) {
+        return personRepo.findByEnumRole(enumRole);
+    }
 
     public List<Person> getPersonList() {
         return personRepo.findAllByCourseId(1);

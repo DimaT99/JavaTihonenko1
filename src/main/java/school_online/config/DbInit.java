@@ -10,7 +10,7 @@ import java.util.Random;
 @Component
 public class DbInit {
 
-    private final StudentService studentService;
+    private StudentService studentService;
 
     private Random random = new Random();
 
