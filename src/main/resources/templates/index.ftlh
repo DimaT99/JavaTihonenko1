@@ -49,7 +49,7 @@
 <h3>Обліковий запис</h3>
 <div class="flex-container">
     <ol>
-        <li><a href="/profile" target="_parent">Вхід</a></li>
+        <li><a href="/login" target="_parent">Вхід</a></li>
         <li><a href="/registration">Реєстрація</a></li>
         <li><a href="/test">Тестування</a></li>
     </ol>
