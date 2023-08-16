@@ -51,6 +51,7 @@
     <ol>
         <li><a href="/profile" target="_parent">Вхід</a></li>
         <li><a href="/registration">Реєстрація</a></li>
+        <li><a href="/test">Тестування</a></li>
     </ol>
 </div>
 
