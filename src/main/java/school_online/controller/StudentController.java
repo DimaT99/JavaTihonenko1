@@ -46,12 +46,12 @@ public class StudentController {
         return "student";
     }
     @GetMapping("/student")
-    public String formForTree(Model model) {
+    public String formForStudent(Model model) {
         return "studentserv";
     }
     @PostMapping("/add")
     public String addStudent(@RequestParam String name,
-                             @RequestParam int courseId) {
+                             @RequestParam Integer courseId) {
         Student student = new Student();
         student.setName(name);
         student.setCourseId(courseId);
