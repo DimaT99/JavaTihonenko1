@@ -25,10 +25,14 @@
             <td>${student.getName()}</td>
             <td>${student.getCourseId()}</td>
 
+            <td><a href="/students/delete/${student.getId()}"><p>DELETE</a></td>
         </tr>
     </#list>
     </tbody>
 </table>
+<ul>
+    <li><a href="/" target="_parent">Main</a></li>
+</ul>
 
 </body>
 </html>

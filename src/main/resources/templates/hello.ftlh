@@ -6,11 +6,9 @@
 <body>
 <h1>${"Is under development"}</h1>
 
-<#--<ul>
-    <#list menu as menu>
-        <li><a href="${course.link}">${course.label}</a></li>
-    </#list>
-</ul>-->
+<ul>
+    <li><a href="/" target="_parent">Main</a></li>
+</ul>
 
 </body>
 </html>

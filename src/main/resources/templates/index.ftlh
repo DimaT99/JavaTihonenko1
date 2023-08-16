@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Online school</title>
-    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/styles.css"/>
 </head>
 
 <body>
@@ -46,18 +46,11 @@
 
 <hr>
 
-<h3>Перегляд сортувань</h3>
+<h3>Обліковий запис</h3>
 <div class="flex-container">
     <ol>
-        <li><a href="/spring" target="_parent">Дані про студентів
-                відсортовані за прізвищем</a></li>
-        <li><a href="/spring">Назва лекції та кількість додаткових
-                матеріалів</a></li>
-        <li><a href="/spring">Лекція створена раніше за всіх</a></li>
-        <li><a href="/spring">Кількість додаткових матеріалів по
-                категоріям</a></li>
-        <li><a href="/spring"> Список вчителів до літери N</a></li>
-        <li><a href="/spring"> Студенти за кількістю курсів</a></li>
+        <li><a href="/profile" target="_parent">Вхід</a></li>
+        <li><a href="/registration">Реєстрація</a></li>
     </ol>
 </div>
 
